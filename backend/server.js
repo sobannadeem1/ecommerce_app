@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://ecommerce-app-two-murex.vercel.app/",
+    origin: "https://ecommerce-app-two-murex.vercel.app",
     credentials: true,
     methods: "PUT,POST,GET,DELETE,PATCH,HEAD",
   })
