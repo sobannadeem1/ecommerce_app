@@ -16,12 +16,13 @@ app.use(
     methods: "PUT,POST,GET,DELETE,PATCH,HEAD",
   })
 );
-
+app.get("/", (req, res) => {
+  res.send("Welcome");
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use("/api/user/", userRoutes);
-
 app.use(notFound);
 app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
